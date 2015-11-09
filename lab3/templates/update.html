@@ -1,0 +1,35 @@
+﻿<html>
+ <head> 
+    <title>update</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+  <style type="text/css">
+	body {
+	background-image: url(../../images/?id=Background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+</style> 
+ </head> 
+ <body> 
+  <center>
+   <font size="9;" color="blue"> <strong>更新书籍 </strong></font>
+  </center>
+  <p>&nbsp;</p> 
+   <form method="post" action="/update/"> 
+    <center>{{book.title}}  
+    </center> 
+    <p align="center"><strong>作者ID:  </strong> <input type="text" name="authorid" value={{book.authorid}}> </p> 
+    <p align="center"><strong>出版商:  </strong><input type="text" name="publisher" value={{book.publisher}}> </p> 
+    <p align="center"><strong>出版日期:</strong> <input type="text" name="publishdate" value={{book.publishdate}}> </p> 
+    <p align="center"><strong>价格: </strong><input type="text" name="price" value={{book.price}}> </p> 
+    <center> 
+     <input type="submit" value="保存" /> 
+    </center> 
+   </form>   
+     <p>&nbsp;</p> 
+  <center>
+   <a href="/"> 回到主页 </a> 
+  </center>  
+ </body>
+</html>

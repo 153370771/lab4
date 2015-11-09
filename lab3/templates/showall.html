@@ -1,0 +1,57 @@
+﻿<html>
+ <head> 
+    <title>showall</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+  <style type="text/css">
+	body {
+	background-image: url(../../images/?id=Background.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+</style> 
+ </head> 
+ <body> 
+  <p>&nbsp;</p> 
+  <p>&nbsp;</p> 
+  <p>&nbsp;</p> 
+  <center> 
+   <h1> <strong>以下为该数据库收集的所有图书</strong> </h1> 
+  </center> 
+
+  <table border="2" align="center"> 
+   <tbody> 
+    <tr> 
+     <th> 
+      <center>
+        书籍名称 
+      </center></th> 
+     <th> 
+      <center>
+        操作 
+      </center></th> 
+    </tr> {% for book in book_lst %} 
+    <tr> 
+     <td>
+     <a href="/showdata/?id={{book.title}}"> {{book.title}} </a></td>
+     <td> 
+      <center> 
+        <a href="/delete/?id={{book.title}}">删除</a> 
+        <a href="/update/?id={{book.title}}">更新</a> 
+      </center> </td> 
+    </tr>
+	{% endfor %}
+   </tbody> 
+  </table> 
+  <p>&nbsp;</p> 
+  <p>&nbsp;</p> 
+   <center> 
+    <a href="../add/"> 增加书籍信息 </a> 
+   </center> 
+   <center> 
+    <a href="/"> 回到主页 </a>
+   </center> 
+   <p>&nbsp;</p>  
+  </form>
+ </body>
+</html>
